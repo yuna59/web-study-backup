@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo 리스트</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Todo 리스트</h1>
+            <p>오늘의 할 일을 정리해보세요!</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    class="todo-input" 
+                    placeholder="새로운 할 일을 입력하세요..."
+                >
+                <button id="addBtn" class="add-btn">추가</button>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="active">진행 중</button>
+                <button class="filter-btn" data-filter="completed">완료됨</button>
+            </div>
+
+            <ul id="todoList" class="todo-list">
+                <!-- Todo 항목이 여기에 추가됩니다 -->
+            </ul>
+
+            <div class="stats">
+                <span>전체: <strong id="totalCount">0</strong></span>
+                <span>완료: <strong id="completedCount">0</strong></span>
+            </div>
+        </main>
+
+        <footer>
+            <button id="clearBtn" class="clear-btn">완료된 항목 제거</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
